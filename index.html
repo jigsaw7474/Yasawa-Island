@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yasawa Island Resort and Spa - Premium Wine List</title>
+    <style>
+        /* Basic CSS for styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        header img {
+            max-height: 80px; /* Adjust as needed */
+        }
+
+        nav {
+            margin-top: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav a {
+            display: block;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #555;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #c7a17a; /* Example highlight color */
+        }
+
+        .wine-category {
+            margin-top: 30px;
+        }
+
+        .wine-category h2 {
+            border-bottom: 2px solid #c7a17a;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .wine-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .wine-card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .wine-card img {
+            max-width: 150px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .wine-card h3 {
+            margin-top: 0;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .wine-card p {
+            margin-bottom: 10px;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .wine-card .prices {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .wine-card .prices span {
+            padding: 5px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav li {
+                margin-bottom: 10px;
+            }
+
+            .wine-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="[YOUR_RESORT_LOGO_URL_HERE]" alt="Yasawa Island Resort and Spa Logo">
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#rose">Rosé</a></li>
+                <li><a href="#red-wine">Red Wine</a></li>
+                <li><a href="#non-alcoholic">Non-Alcoholic</a></li>
+                <li><a href="#sparkling-wine">Sparkling Wine</a></li>
+                <li><a href="#champagne">Champagne</a></li>
+                <li><a href="#white-wine">White Wine</a></li>
+            </ul>
+        </nav>
+
+        <section id="rose" class="wine-category">
+            <h2>Rosé</h2>
+            <div class="wine-grid">
+                <div class="wine-card">
+                    <img src="[ROSE_WINE_IMAGE_URL_1]" alt="Rosé Wine 1">
+                    <h3>[Rosé Wine Name 1]</h3>
+                    <p>[Brief description of Rosé Wine 1]</p>
+                    <div class="prices">
+                        <span>Bottle: [Price per Bottle]</span>
+                        <span>Glass: [Price per Glass]</span>
+                    </div>
+                </div>
+                <div class="wine-card">
+                    <img src="[ROSE_WINE_IMAGE_URL_2]" alt="Rosé Wine 2">
+                    <h3>[Rosé Wine Name 2]</h3>
+                    <p>[Brief description of Rosé Wine 2]</p>
+                    <div class="prices">
+                        <span>Bottle: [Price per Bottle]</span>
+                        <span>Glass: [Price per Glass]</span>
+                    </div>
+                </div>
+                <div class="wine-card">
+                    <img src="[ROSE_WINE_IMAGE_URL_3]" alt="Rosé Wine 3">
+                    <h3>[Rosé Wine Name 3]</h3>
+                    <p>[Brief description of Rosé Wine 3]</p>
+                    <div class="prices">
+                        <span>Bottle: [Price per Bottle]</span>
+                        <span>Glass: [Price per Glass]</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="red-wine" class="wine-category">
+            <h2>Red Wine</h2>
+            <div class="wine-grid">
+                <!-- 14 Red Wines -->
+                <div class="wine-card">
+                    <img src="[RED_WINE_IMAGE_URL_1]" alt="Red Wine 1">
+                    <h3>[Red Wine Name 1]</h3>
+                    <p>[Brief description of Red Wine 1]</p>
+                    <div class="prices">
+                        <span>Bottle: [Price per Bottle]</span>
+                        <span>Glass: [Price per Glass]</span>
+                    </div>
+                </div>
+                <div class="wine-card">
+                    <img src="[RED_WINE_IMAGE_URL_2]" alt="Red Wine 2">
+                    <h3>[Red Wine Name 2]</h3>
+                    <p>[Brief description of Red Wine 2]</p>
+                    <div class="prices">
+                        <span>Bottle: [Price per Bottle]</span>
+                        <span>Glass: [Price per Glass]</span>
+                    </div>
+                </div>
+                <div class="wine-card">
+                    <img src="[RED_WINE_IMAGE_URL_3]" alt="Red Wine 3">
+                    <h3>[Red Wine Name 3]</h3>
+                    <p>[Brief description of Red Wine 3]</p>
+                    <div class="prices">
+                        <span>Bottle: [Price per Bottle]</span>
+                        <span>Glass: [Price per Glass]</span>
+                    </div>
+                </div>
+                <div class="wine-card">
+                    <img src="[RED_WINE_IMAGE_URL_4]" alt="Red Wine 4">
+                    <h3>[Red Wine Name 4]</h3>
+                    <p>[Brief description of Red Wine 4]</p>
+                    <div class="prices">
+                        <span>Bottle: [Price per Bottle]</span>
+                        <span>Glass: [Price per Glass]</span>
+                    </div>
+                </div>
+                <div class="wine-card">
+                    <img src="[RED_WINE_IMAGE_URL_5]" alt="Red Wine 5">
+                    <h3>[Red Wine Name 5]</h3>
+                    <p>[Brief description of Red Wine 5]</p>
+                    <div class="prices">
+                        <span>Bottle: [Price per Bottle]</span>
+                        <span>Glass: [Price per Glass]</span>
+                    </div>
+                </div>
+                <div class="wine-card">
+                    <img src="[RED_WINE_IMAGE_URL_6]" alt="Red Wine 6">
+                    <h3>[Red Wine Name 6]</h3>
+                    <p>[Brief description of Red Wine 6]</p>
+                    <div class="prices">
+                        <span>Bottle: [Price per Bottle]</span>
+                        <span>Glass: [Price per Glass]</span>
+                    </div>
+                </div>
+                <div class="wine-card">
+                    <img src="[RED_WINE_IMAGE_URL_7]" alt="Red Wine 7">
+                    <h3>[Red Wine Name 7]</h3>
+                    <p>[Brief description of Red Wine 7]</p>
+                    <div class="prices">
+                        <span>Bottle: [Price per Bottle]</span>
+                        <span>Glass: [Price per Glass]</span>
+                    </div>
+                </div>
+                <div class="wine-card">
+                    <img src="[RED_WINE_IMAGE_URL_8]" alt="Red Wine 8">
+                    <h3>[Red Wine Name 8]</h3>
+                    <p>[Brief description of Red Wine 8]</p>
+                    <div class="prices">
+                        <span>Bottle: [Price per Bottle]</span>
+                        <span>Glass: [Price per Glass]</span>
+                    </div>
+                </div>
+                <div class="wine-card">
+                    <img src="[RED_WINE_IMAGE_URL_9]" alt="Red Wine 9">
+                    <h3>[Red Wine Name 9]</h3>
+                    <p>[Brief description of Red Wine 9]</p>
+                    <div class="prices">
+                        <span>Bottle: [Price per Bottle]</span>
+                        <span>Glass: [Price per Glass]</span>
+                    </div>
+                </div>
+                <div class="wine-card">
+                    <img src="[RED_WINE_IMAGE_URL_10]" alt="Red Wine 10">
+                    <h3>[Red Wine Name 10]</h3>
+                    <p>[Brief description of Red Wine 10]</p>
+                    <div class="prices">
+                        <span>Bottle: [Price per Bottle]</span>
+                        <span>Glass: [Price per Glass]</span>
+                    </div>
+                </div>
+                <div class="wine-card">
+                    <img src="[RED_WINE_IMAGE_URL_11]" alt="Red Wine 11">
+                    <h3>[Red Wine Name 11]</h3>
+                    <p>[Brief description of Red Wine 11]</p>
+                    <div class="prices">
+                        <span>Bottle: [Price per Bottle]</span>
+                        <span>Glass: [Price per Glass]</span>
+                    </div>
+                </div>
+                <div class="wine-card">
+                    <img src="[RED_WINE_IMAGE_URL_12]" alt="Red Wine 12">
+                    <h3>[Red Wine Name 12]</h3>
+                    <p>[Brief description of Red Wine 12]</p>
+                    <div class="prices">
+                        <span>Bottle: [Price per Bottle]</span>
+                        <span>Glass: [Price per Glass]</span>
+                    </div>
+                </div>
+                <div class="wine-card">
+                    <img src="[RED_WINE_IMAGE_URL_13]" alt="Red Wine 13">
+                    <h3>[Red Wine Name 13]</h3>
+                    <p>[Brief description of Red Wine 13]</p>
+                    <div class="prices">
+                        <span>Bottle: [Price per Bottle]</span>
+                        <span>Glass: [Price per Glass]</span>
+                    </div>
+                </div>
+                <div class="wine-card">
+                    <img src="[RED_WINE_IMAGE_URL_14]" alt="Red Wine 14">
+                    <h3>[Red Wine Name 14]</h3>
+                    <p>[Brief description of Red Wine 14]</p>
+                    <div class="prices">
+                        <span>Bottle: [Price per Bottle]</span>
+                        <span>Glass: [Price per Glass]</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="non-alcoholic" class="wine-category">
+            <h2>Non-Alcoholic</h2>
+            <div class="wine-grid">
+                <div class="wine-card">
+                    <img src="[NON_ALCOHOLIC_IMAGE_URL_1]" alt="Non-Alcoholic 1">
+                    <h3>[Non-Alcoholic Name 1]</h3>
+                    <p>[Brief description of Non-Alcoholic 1]</p>
+                    <div class="prices">
+                        <span>Bottle: [Price per Bottle]</span>
+                        <span>Glass: [Price per Glass]</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sparkling-wine" class="wine-category">
+            <h2>Sparkling Wine</h2>
+            <div class="wine-grid">
+                <div class="wine-card">
+                    <img src="[SPARKLING_WINE_IMAGE_URL_1]" alt="Sparkling Wine 1">
+                    <h3>[Sparkling Wine Name 1]</h3>
+                    <p>[Brief description of Sparkling Wine 1]</p>
+                    <div class="prices">
+                        <span>Bottle: [Price per Bottle]</span>
+                        <span>Glass: [Price per Glass]</span>
+                    </div>
+                </div>
+                <div class="wine-card">
+                    <img src="[SPARKLING_WINE_IMAGE_URL_2]" alt="Sparkling Wine 2">
+                    <h3>[Sparkling Wine Name 2]</h3>
+                    <p>[Brief description of Sparkling Wine 2]</p>
+                    <div class="prices">
+                        <span>Bottle: [Price per Bottle]</span>
+                        <span>Glass: [Price per Glass]</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="champagne" class="wine-category">
+            <h2>Champagne</h2>
+            <div class="wine-grid">
+                <div class="wine-card">
+                    <img src="[CHAMPAGNE_IMAGE_URL_1]" alt="Champagne 1">
+                    <h3>[Champagne Name 1]</h3>
+                    <p>[Brief description of Champagne 1]</p>
+                    <div class="prices">
+                        <span>Bottle: [Price per Bottle]</span>
+                        <span>Glass: [Price per Glass]</span>
+                    </div>
+                </div>
+                <div class="wine-card">
+                    <img src="[CHAMPAGNE_IMAGE_URL_2]" alt="Champagne 2">
+                    <h3>[Champagne Name 2]</h3>
+                    <p>[Brief description of Champagne 2]</p>
+                    <div class="prices">
+                        <span>Bottle: [Price per Bottle]</span>
+                        <span>Glass: [Price per Glass]</span>
+                    </div>
+                </div>
+                <div class="wine-card">
+                    <img src="[CHAMPAGNE_IMAGE_URL_3]" alt="Champagne 3">
+                    <h3>[Champagne Name 3]</h3>
+                    <p>[Brief description of Champagne 3]</p>
+                    <div class="prices">
+                        <span>Bottle: [Price per Bottle]</span>
+                        <span>Glass: [Price per Glass]</span>
+                    </div>
+                </div>
+                <div class="wine-card">
+                    <img src="[CHAMPAGNE_IMAGE_URL_4]" alt="Champagne 4">
+                    <h3>[Champagne Name 4]</h3>
+                    <p>[Brief description of Champagne 4]</p>
+                    <div class="prices">
+                        <span>Bottle: [Price per Bottle]</span>
+                        <span>Glass: [Price per Glass]</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="white-wine" class="wine-category">
+            <h2>White Wine</h2>
+            <div class="wine-grid">
+                <div class="wine-card">
+                    <img src="[WHITE_WINE_IMAGE_URL_1]" alt="White Wine 1">
+                    <h3>[White Wine Name 1]</h3>
+                    <p>[Brief description of White Wine 1]</p>
+                    <div class="prices">
+                        <span>Bottle: [Price per Bottle]</span>
+                        <span>Glass: [Price per Glass]</span>
+                    </div>
+                </div>
+                <div class="wine-card">
+                    <img src="[WHITE_WINE_IMAGE_URL_2]" alt="White Wine 2">
+                    <h3>[White Wine Name 2]</h3>
+                    <p>[Brief description of White Wine 2]</p>
+                    <div class="prices">
+                        <span>Bottle: [Price per Bottle]</span>
+                        <span>Glass: [Price per Glass]</span>
+                    </div>
+                </div>
+                <div class="wine-card">
+                    <img src="[WHITE_WINE_IMAGE_URL_3]" alt="White Wine 3">
+                    <h3>[White Wine Name 3]</h3>
+                    <p>[Brief description of White Wine 3]</p>
+                    <div class="prices">
+                        <span>Bottle: [Price per Bottle]</span>
+                        <span>Glass: [Price per Glass]</span>
+                    </div>
+                </div>
+                <div class="wine-card">
+                    <img src="[WHITE_WINE_IMAGE_URL_4]" alt="White Wine 4">
+                    <h3>[White Wine Name 4]</h3>
+                    <p>[Brief description of White Wine 4]</p>
+                    <div class="prices">
+                        <span>Bottle: [Price per Bottle]</span>
+                        <span>Glass: [Price per Glass]</span>
+                    </div>
+                </div>
+                <div class="wine-card">
+                    <img src="[WHITE_WINE_IMAGE_URL_5]" alt="White Wine 5">
+                    <h3>[White Wine Name 5]</h3>
+                    <p>[Brief description of White Wine 5]</p>
+                    <div class="prices">
+                        <span>Bottle: [Price per Bottle]</span>
+                        <span>Glass: [Price per Glass]</span>
+                    </div>
+                </div>
+                <div class="wine-card">
+                    <img src="[WHITE_WINE_IMAGE_URL_6]" alt="White Wine 6">
+                    <h3>[White Wine Name 6]</h3>
+                    <p>[Brief description of White Wine 6]</p>
+                    <div class="prices">
+                        <span>Bottle: [Price per Bottle]</span>
+                        <span>Glass: [Price per Glass]</span>
+                    </div>
+                </div>
+                <div class="wine-card">
+                    <img src="[WHITE_WINE_IMAGE_URL_7]" alt="White Wine 7">
+                    <h3>[White Wine Name 7]</h3>
+                    <p>[Brief description of White Wine 7]</p>
+                    <div class="prices">
+                        <span>Bottle: [Price per Bottle]</span>
+                        <span>Glass: [Price per Glass]</span>
+                    </div>
+                </div>
+                <div class="wine-card">
+                    <img src="[WHITE_WINE_IMAGE_URL_8]" alt="White Wine 8">
+                    <h3>[White Wine Name 8]</h3>
+                    <p>[Brief description of White Wine 8]</p>
+                    <div class="prices">
+                        <span>Bottle: [Price per Bottle]</span>
+                        <span>Glass: [Price per Glass]</span>
+                    </div>
+                </div>
+                <div class="wine-card">
+                    <img src="[WHITE_WINE_IMAGE_URL_9]" alt="White Wine 9">
+                    <h3>[White Wine Name 9]</h3>
+                    <p>[Brief description of White Wine 9]</p>
+                    <div class="prices">
+                        <span>Bottle: [Price per Bottle]</span>
+                        <span>Glass: [Price per Glass]</span>
+                    </div>
+                </div>
+                <div class="wine-card">
+                    <img src="[WHITE_WINE_IMAGE_URL_10]" alt="White Wine 10">
+                    <h3>[White Wine Name 10]</h3>
+                    <p>[Brief description of White Wine 10]</p>
+                    <div class="prices">
+                        <span>Bottle: [Price per Bottle]</span>
+                        <span>Glass: [Price per Glass]</span>
+                    </div>
+                </div>
+                <div class="wine-card">
+                    <img src="[WHITE_WINE_IMAGE_URL_11]" alt="White Wine 11">
+                    <h3>[White Wine Name 11]</h3>
+                    <p>[Brief description of White Wine 11]</p>
+                    <div class="prices">
+                        <span>Bottle: [Price per Bottle]</span>
+                        <span>Glass: [Price per Glass]</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
