@@ -12,6 +12,7 @@
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
+            transition: opacity 0.5s ease;
         }
 
         .container {
@@ -118,6 +119,44 @@
             padding: 5px;
         }
 
+        .greeting {
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        .greeting h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .greeting p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .enter-button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            color: white;
+            background-color: #c7a17a;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .enter-button:hover {
+            background-color: #b5945e;
+            transform: scale(1.05);
+        }
+
+        .footer {
+            font-size: 0.8em;
+            text-align: center;
+            margin-top: 50px;
+            color: #666;
+        }
+
         /* Responsive adjustments */
         @media (max-width: 768px) {
             nav ul {
@@ -136,9 +175,22 @@
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="greeting-page">
         <header>
-            <img src="[YOUR_RESORT_LOGO_URL_HERE]" alt="Yasawa Island Resort and Spa Logo">
+            <img src="https://github.com/jigsaw7474/Yasawa-Island/blob/main/Yasawa%20Logo.png?raw=true" alt="Yasawa Island Resort and Spa Logo">
+        </header>
+
+        <div class="greeting">
+            <h1>The Yasawa Island Cellar Experience</h1>
+            <p>A curated selection of exceptional wines, handpicked to complement the beauty of Yasawa.</p>
+            <p>Savor each sip as you indulge in the finest flavors from around the world, perfectly paired with your island experience.</p>
+            <button class="enter-button" onclick="enterWineList()">Enter</button>
+        </div>
+    </div>
+
+    <div class="container" id="wine-list" style="display: none;">
+        <header>
+            <img src="https://github.com/jigsaw7474/Yasawa-Island/blob/main/Yasawa%20Logo.png?raw=true" alt="Yasawa Island Resort and Spa Logo">
         </header>
 
         <nav>
@@ -156,30 +208,30 @@
             <h2>Rosé</h2>
             <div class="wine-grid">
                 <div class="wine-card">
-                    <img src="[ROSE_WINE_IMAGE_URL_1]" alt="Rosé Wine 1">
-                    <h3>[Rosé Wine Name 1]</h3>
-                    <p>[Brief description of Rosé Wine 1]</p>
+                    <img src="https://github.com/jigsaw7474/Yasawa-Island/blob/main/Wine%20Images/2022%20Soho%20Westwood%20Ros%C3%A9.png?raw=true" alt="2022 Soho Westwood Rosé">
+                    <h3>2022 Soho Westwood Rosé</h3>
+                    <p>Waiheke Island, New Zealand</p>
                     <div class="prices">
-                        <span>Bottle: [Price per Bottle]</span>
-                        <span>Glass: [Price per Glass]</span>
+                        <span>Bottle: 90</span>
+                        <span>Glass: 22*</span>
                     </div>
                 </div>
                 <div class="wine-card">
-                    <img src="[ROSE_WINE_IMAGE_URL_2]" alt="Rosé Wine 2">
-                    <h3>[Rosé Wine Name 2]</h3>
-                    <p>[Brief description of Rosé Wine 2]</p>
+                    <img src="https://github.com/jigsaw7474/Yasawa-Island/blob/main/Wine%20Images/2021%20Babich%20Pinot%20Noir%20Ros%C3%A9.png?raw=true" alt="2021 Babich Pinot Noir Rosé">
+                    <h3>2021 Babich Pinot Noir Rosé</h3>
+                    <p>Marlborough, New Zealand</p>
                     <div class="prices">
-                        <span>Bottle: [Price per Bottle]</span>
-                        <span>Glass: [Price per Glass]</span>
+                        <span>Bottle: 125</span>
+                        <span>Glass: -</span>
                     </div>
                 </div>
                 <div class="wine-card">
-                    <img src="[ROSE_WINE_IMAGE_URL_3]" alt="Rosé Wine 3">
-                    <h3>[Rosé Wine Name 3]</h3>
-                    <p>[Brief description of Rosé Wine 3]</p>
+                    <img src="https://github.com/jigsaw7474/Yasawa-Island/blob/main/Wine%20Images/2022%20Maison%20Saint%20AIX%20Ros%C3%A9.png?raw=true" alt="2022 Maison Saint AIX Rosé">
+                    <h3>2022 Maison Saint AIX Rosé</h3>
+                    <p>Provence, France</p>
                     <div class="prices">
-                        <span>Bottle: [Price per Bottle]</span>
-                        <span>Glass: [Price per Glass]</span>
+                        <span>Bottle: 150</span>
+                        <span>Glass: -</span>
                     </div>
                 </div>
             </div>
@@ -190,129 +242,129 @@
             <div class="wine-grid">
                 <!-- 14 Red Wines -->
                 <div class="wine-card">
-                    <img src="[RED_WINE_IMAGE_URL_1]" alt="Red Wine 1">
-                    <h3>[Red Wine Name 1]</h3>
-                    <p>[Brief description of Red Wine 1]</p>
+                    <img src="https://github.com/jigsaw7474/Yasawa-Island/blob/main/Wine%20Images/2019%20Yalumba%20Shiraz_Cabernet.png?raw=true" alt="2019 Yalumba Shiraz/Cabernet">
+                    <h3>2019 Yalumba Shiraz/Cabernet</h3>
+                    <p>Barossa Valley, Australia</p>
                     <div class="prices">
-                        <span>Bottle: [Price per Bottle]</span>
-                        <span>Glass: [Price per Glass]</span>
+                        <span>Bottle: 125</span>
+                        <span>Glass: -</span>
                     </div>
                 </div>
                 <div class="wine-card">
-                    <img src="[RED_WINE_IMAGE_URL_2]" alt="Red Wine 2">
-                    <h3>[Red Wine Name 2]</h3>
-                    <p>[Brief description of Red Wine 2]</p>
+                    <img src="https://github.com/jigsaw7474/Yasawa-Island/blob/main/Wine%20Images/2018%20Sam%20Miranda%20Cabernet%20Sauvignon.png?raw=true" alt="2018 Sam Miranda Cabernet Sauvignon">
+                    <h3>2018 Sam Miranda Cabernet Sauvignon</h3>
+                    <p>King Valley, Australia</p>
                     <div class="prices">
-                        <span>Bottle: [Price per Bottle]</span>
-                        <span>Glass: [Price per Glass]</span>
+                        <span>Bottle: 80</span>
+                        <span>Glass: 20*</span>
                     </div>
                 </div>
                 <div class="wine-card">
-                    <img src="[RED_WINE_IMAGE_URL_3]" alt="Red Wine 3">
-                    <h3>[Red Wine Name 3]</h3>
-                    <p>[Brief description of Red Wine 3]</p>
+                    <img src="https://github.com/jigsaw7474/Yasawa-Island/blob/main/Wine%20Images/2014%20Stella%20Bella%20Cabernet%20Sauvignon.png?raw=true" alt="2014 Stella Bella Cabernet Sauvignon">
+                    <h3>2014 Stella Bella Cabernet Sauvignon</h3>
+                    <p>Margaret River, Australia</p>
                     <div class="prices">
-                        <span>Bottle: [Price per Bottle]</span>
-                        <span>Glass: [Price per Glass]</span>
+                        <span>Bottle: 155</span>
+                        <span>Glass: -</span>
                     </div>
                 </div>
                 <div class="wine-card">
-                    <img src="[RED_WINE_IMAGE_URL_4]" alt="Red Wine 4">
-                    <h3>[Red Wine Name 4]</h3>
-                    <p>[Brief description of Red Wine 4]</p>
+                    <img src="https://github.com/jigsaw7474/Yasawa-Island/blob/main/Wine%20Images/2021%20Vistamar%20Sepia%20Cabernet%20Sauvignon.png?raw=true" alt="2021 Vistamar Sepia Cabernet Sauvignon">
+                    <h3>2021 Vistamar Sepia Cabernet Sauvignon</h3>
+                    <p>Cachapoal Valley, Chile</p>
                     <div class="prices">
-                        <span>Bottle: [Price per Bottle]</span>
-                        <span>Glass: [Price per Glass]</span>
+                        <span>Bottle: 75</span>
+                        <span>Glass: 20*</span>
                     </div>
                 </div>
                 <div class="wine-card">
-                    <img src="[RED_WINE_IMAGE_URL_5]" alt="Red Wine 5">
-                    <h3>[Red Wine Name 5]</h3>
-                    <p>[Brief description of Red Wine 5]</p>
+                    <img src="https://github.com/jigsaw7474/Yasawa-Island/blob/main/Wine%20Images/2022%20Brightwater%20Gravels%20Pinot%20Noir.png?raw=true" alt="2022 Brightwater Gravels Pinot Noir">
+                    <h3>2022 Brightwater Gravels Pinot Noir</h3>
+                    <p>Nelson, New Zealand</p>
                     <div class="prices">
-                        <span>Bottle: [Price per Bottle]</span>
-                        <span>Glass: [Price per Glass]</span>
+                        <span>Bottle: 115</span>
+                        <span>Glass: 24*</span>
                     </div>
                 </div>
                 <div class="wine-card">
-                    <img src="[RED_WINE_IMAGE_URL_6]" alt="Red Wine 6">
-                    <h3>[Red Wine Name 6]</h3>
-                    <p>[Brief description of Red Wine 6]</p>
+                    <img src="https://github.com/jigsaw7474/Yasawa-Island/blob/main/Wine%20Images/2022%20Babich%20Pinot%20Noir.png?raw=true" alt="2022 Babich Pinot Noir">
+                    <h3>2022 Babich Pinot Noir</h3>
+                    <p>Marlborough, New Zealand</p>
                     <div class="prices">
-                        <span>Bottle: [Price per Bottle]</span>
-                        <span>Glass: [Price per Glass]</span>
+                        <span>Bottle: 90</span>
+                        <span>Glass: 22*</span>
                     </div>
                 </div>
                 <div class="wine-card">
-                    <img src="[RED_WINE_IMAGE_URL_7]" alt="Red Wine 7">
-                    <h3>[Red Wine Name 7]</h3>
-                    <p>[Brief description of Red Wine 7]</p>
+                    <img src="https://github.com/jigsaw7474/Yasawa-Island/blob/main/Wine%20Images/2021%20Chartron%20et%20Tr%C3%A9buchet%20Bourgogne%20Rouge%20Pinot%20Noir.png?raw=true" alt="2021 Chartron et Trébuchet Bourgogne Rouge Pinot Noir">
+                    <h3>2021 Chartron et Trébuchet Bourgogne Rouge Pinot Noir</h3>
+                    <p>Burgundy, France</p>
                     <div class="prices">
-                        <span>Bottle: [Price per Bottle]</span>
-                        <span>Glass: [Price per Glass]</span>
+                        <span>Bottle: 205</span>
+                        <span>Glass: -</span>
                     </div>
                 </div>
                 <div class="wine-card">
-                    <img src="[RED_WINE_IMAGE_URL_8]" alt="Red Wine 8">
-                    <h3>[Red Wine Name 8]</h3>
-                    <p>[Brief description of Red Wine 8]</p>
+                    <img src="https://github.com/jigsaw7474/Yasawa-Island/blob/main/Wine%20Images/2020%20Wyndham%20Bin%20999%20Merlot.png?raw=true" alt="2020 Wyndham Bin 999 Merlot">
+                    <h3>2020 Wyndham Bin 999 Merlot</h3>
+                    <p>South Australia</p>
                     <div class="prices">
-                        <span>Bottle: [Price per Bottle]</span>
-                        <span>Glass: [Price per Glass]</span>
+                        <span>Bottle: 80</span>
+                        <span>Glass: -</span>
                     </div>
                 </div>
                 <div class="wine-card">
-                    <img src="[RED_WINE_IMAGE_URL_9]" alt="Red Wine 9">
-                    <h3>[Red Wine Name 9]</h3>
-                    <p>[Brief description of Red Wine 9]</p>
+                    <img src="https://github.com/jigsaw7474/Yasawa-Island/blob/main/Wine%20Images/2019%20Kendall-Jackson%20Vintner's%20Reserve%20Merlot.png?raw=true" alt="2019 Kendall-Jackson Vintner's Reserve Merlot">
+                    <h3>2019 Kendall-Jackson Vintner's Reserve Merlot</h3>
+                    <p>Sonoma, California</p>
                     <div class="prices">
-                        <span>Bottle: [Price per Bottle]</span>
-                        <span>Glass: [Price per Glass]</span>
+                        <span>Bottle: 195</span>
+                        <span>Glass: -</span>
                     </div>
                 </div>
                 <div class="wine-card">
-                    <img src="[RED_WINE_IMAGE_URL_10]" alt="Red Wine 10">
-                    <h3>[Red Wine Name 10]</h3>
-                    <p>[Brief description of Red Wine 10]</p>
+                    <img src="https://github.com/jigsaw7474/Yasawa-Island/blob/main/Wine%20Images/2019%20Paul%20Jaboulet%20A%C3%AEn%C3%A9%20Gigondas%20Pierre%20Aiguille%20Grenache,%20Syrah.png?raw=true" alt="2019 Paul Jaboulet Aîné Gigondas Pierre Aiguille Grenache, Syrah">
+                    <h3>2019 Paul Jaboulet Aîné Gigondas Pierre Aiguille Grenache, Syrah</h3>
+                    <p>Rhône, France</p>
                     <div class="prices">
-                        <span>Bottle: [Price per Bottle]</span>
-                        <span>Glass: [Price per Glass]</span>
+                        <span>Bottle: 145</span>
+                        <span>Glass: -</span>
                     </div>
                 </div>
                 <div class="wine-card">
-                    <img src="[RED_WINE_IMAGE_URL_11]" alt="Red Wine 11">
-                    <h3>[Red Wine Name 11]</h3>
-                    <p>[Brief description of Red Wine 11]</p>
+                    <img src="https://github.com/jigsaw7474/Yasawa-Island/blob/main/Wine%20Images/2019%20Ridolfi%20%E2%80%9CFiero%E2%80%9D%20Rosso%20Toscana%20IGT%20Syrah_Cabernet%20Blend.png?raw=true" alt="2019 Ridolfi “Fiero” Rosso Toscana IGT Syrah/Cabernet Blend">
+                    <h3>2019 Ridolfi “Fiero” Rosso Toscana IGT Syrah/Cabernet Blend</h3>
+                    <p>Tuscany, Italy</p>
                     <div class="prices">
-                        <span>Bottle: [Price per Bottle]</span>
-                        <span>Glass: [Price per Glass]</span>
+                        <span>Bottle: 125</span>
+                        <span>Glass: 25*</span>
                     </div>
                 </div>
                 <div class="wine-card">
-                    <img src="[RED_WINE_IMAGE_URL_12]" alt="Red Wine 12">
-                    <h3>[Red Wine Name 12]</h3>
-                    <p>[Brief description of Red Wine 12]</p>
+                    <img src="https://github.com/jigsaw7474/Yasawa-Island/blob/main/Wine%20Images/2020%20Gibson%20The%20Dirtman%20Shiraz.png?raw=true" alt="2020 Gibson The Dirtman Shiraz">
+                    <h3>2020 Gibson The Dirtman Shiraz</h3>
+                    <p>Barossa Valley, Australia</p>
                     <div class="prices">
-                        <span>Bottle: [Price per Bottle]</span>
-                        <span>Glass: [Price per Glass]</span>
+                        <span>Bottle: 125</span>
+                        <span>Glass: 25*</span>
                     </div>
                 </div>
                 <div class="wine-card">
-                    <img src="[RED_WINE_IMAGE_URL_13]" alt="Red Wine 13">
-                    <h3>[Red Wine Name 13]</h3>
-                    <p>[Brief description of Red Wine 13]</p>
+                    <img src="https://github.com/jigsaw7474/Yasawa-Island/blob/main/Wine%20Images/2014%20Shaw%20+%20Smith%20Shiraz.png?raw=true" alt="2014 Shaw + Smith Shiraz">
+                    <h3>2014 Shaw + Smith Shiraz</h3>
+                    <p>Adelaide Hills, Australia</p>
                     <div class="prices">
-                        <span>Bottle: [Price per Bottle]</span>
-                        <span>Glass: [Price per Glass]</span>
+                        <span>Bottle: 215</span>
+                        <span>Glass: -</span>
                     </div>
                 </div>
                 <div class="wine-card">
-                    <img src="[RED_WINE_IMAGE_URL_14]" alt="Red Wine 14">
-                    <h3>[Red Wine Name 14]</h3>
-                    <p>[Brief description of Red Wine 14]</p>
+                    <img src="https://github.com/jigsaw7474/Yasawa-Island/blob/main/Wine%20Images/2018%20Rockford%20Basket%20Press%20Shiraz.png?raw=true" alt="2018 Rockford Basket Press Shiraz">
+                    <h3>2018 Rockford Basket Press Shiraz</h3>
+                    <p>Barossa Valley, Australia</p>
                     <div class="prices">
-                        <span>Bottle: [Price per Bottle]</span>
-                        <span>Glass: [Price per Glass]</span>
+                        <span>Bottle: 375</span>
+                        <span>Glass: -</span>
                     </div>
                 </div>
             </div>
@@ -322,12 +374,12 @@
             <h2>Non-Alcoholic</h2>
             <div class="wine-grid">
                 <div class="wine-card">
-                    <img src="[NON_ALCOHOLIC_IMAGE_URL_1]" alt="Non-Alcoholic 1">
-                    <h3>[Non-Alcoholic Name 1]</h3>
-                    <p>[Brief description of Non-Alcoholic 1]</p>
+                    <img src="https://github.com/jigsaw7474/Yasawa-Island/blob/main/Wine%20Images/Lyre%E2%80%99s%20Classico%20Non-Alcoholic%20Sparkling%20Wine.png?raw=true" alt="Lyre’s Classico Non-Alcoholic Sparkling Wine">
+                    <h3>Lyre’s Classico Non-Alcoholic Sparkling Wine</h3>
+                    <p>Australia</p>
                     <div class="prices">
-                        <span>Bottle: [Price per Bottle]</span>
-                        <span>Glass: [Price per Glass]</span>
+                        <span>Bottle: 80</span>
+                        <span>Glass: -</span>
                     </div>
                 </div>
             </div>
@@ -337,21 +389,21 @@
             <h2>Sparkling Wine</h2>
             <div class="wine-grid">
                 <div class="wine-card">
-                    <img src="[SPARKLING_WINE_IMAGE_URL_1]" alt="Sparkling Wine 1">
-                    <h3>[Sparkling Wine Name 1]</h3>
-                    <p>[Brief description of Sparkling Wine 1]</p>
+                    <img src="https://github.com/jigsaw7474/Yasawa-Island/blob/main/Wine%20Images/NV%20Chevalier%20Monopole.png?raw=true" alt="NV Chevalier Monopole">
+                    <h3>NV Chevalier Monopole</h3>
+                    <p>France</p>
                     <div class="prices">
-                        <span>Bottle: [Price per Bottle]</span>
-                        <span>Glass: [Price per Glass]</span>
+                        <span>Bottle: 110</span>
+                        <span>Glass: 22*</span>
                     </div>
                 </div>
                 <div class="wine-card">
-                    <img src="[SPARKLING_WINE_IMAGE_URL_2]" alt="Sparkling Wine 2">
-                    <h3>[Sparkling Wine Name 2]</h3>
-                    <p>[Brief description of Sparkling Wine 2]</p>
+                    <img src="https://github.com/jigsaw7474/Yasawa-Island/blob/main/Wine%20Images/NV%20Bella%20Vista%20Gran%20Cuv%C3%A9e%20Alma%20Franciacorta.png?raw=true" alt="NV Bella Vista Gran Cuvée Alma Franciacorta">
+                    <h3>NV Bella Vista Gran Cuvée Alma Franciacorta</h3>
+                    <p>Lombardy, Italy</p>
                     <div class="prices">
-                        <span>Bottle: [Price per Bottle]</span>
-                        <span>Glass: [Price per Glass]</span>
+                        <span>Bottle: 275</span>
+                        <span>Glass: -</span>
                     </div>
                 </div>
             </div>
@@ -361,39 +413,39 @@
             <h2>Champagne</h2>
             <div class="wine-grid">
                 <div class="wine-card">
-                    <img src="[CHAMPAGNE_IMAGE_URL_1]" alt="Champagne 1">
-                    <h3>[Champagne Name 1]</h3>
-                    <p>[Brief description of Champagne 1]</p>
+                    <img src="https://github.com/jigsaw7474/Yasawa-Island/blob/main/Wine%20Images/NV%20Mo%C3%ABt%20&%20Chandon.png?raw=true" alt="NV Moët & Chandon">
+                    <h3>NV Moët & Chandon</h3>
+                    <p>Champagne, France</p>
                     <div class="prices">
-                        <span>Bottle: [Price per Bottle]</span>
-                        <span>Glass: [Price per Glass]</span>
+                        <span>Bottle: 200</span>
+                        <span>Glass: -</span>
                     </div>
                 </div>
                 <div class="wine-card">
-                    <img src="[CHAMPAGNE_IMAGE_URL_2]" alt="Champagne 2">
-                    <h3>[Champagne Name 2]</h3>
-                    <p>[Brief description of Champagne 2]</p>
+                    <img src="https://github.com/jigsaw7474/Yasawa-Island/blob/main/Wine%20Images/NV%20Gremillet%20Brut.png?raw=true" alt="NV Gremillet Brut">
+                    <h3>NV Gremillet Brut</h3>
+                    <p>Champagne, France</p>
                     <div class="prices">
-                        <span>Bottle: [Price per Bottle]</span>
-                        <span>Glass: [Price per Glass]</span>
+                        <span>Bottle: 300</span>
+                        <span>Glass: -</span>
                     </div>
                 </div>
                 <div class="wine-card">
-                    <img src="[CHAMPAGNE_IMAGE_URL_3]" alt="Champagne 3">
-                    <h3>[Champagne Name 3]</h3>
-                    <p>[Brief description of Champagne 3]</p>
+                    <img src="https://github.com/jigsaw7474/Yasawa-Island/blob/main/Wine%20Images/NV%20Veuve%20Clicquot%20Brut.png?raw=true" alt="NV Veuve Clicquot Brut">
+                    <h3>NV Veuve Clicquot Brut</h3>
+                    <p>Champagne, France</p>
                     <div class="prices">
-                        <span>Bottle: [Price per Bottle]</span>
-                        <span>Glass: [Price per Glass]</span>
+                        <span>Bottle: 320</span>
+                        <span>Glass: -</span>
                     </div>
                 </div>
                 <div class="wine-card">
-                    <img src="[CHAMPAGNE_IMAGE_URL_4]" alt="Champagne 4">
-                    <h3>[Champagne Name 4]</h3>
-                    <p>[Brief description of Champagne 4]</p>
+                    <img src="https://github.com/jigsaw7474/Yasawa-Island/blob/main/Wine%20Images/2012%20Dom%20P%C3%A9rignon.png?raw=true" alt="2012 Dom Pérignon">
+                    <h3>2012 Dom Pérignon</h3>
+                    <p>Champagne, France</p>
                     <div class="prices">
-                        <span>Bottle: [Price per Bottle]</span>
-                        <span>Glass: [Price per Glass]</span>
+                        <span>Bottle: 990</span>
+                        <span>Glass: -</span>
                     </div>
                 </div>
             </div>
@@ -403,106 +455,122 @@
             <h2>White Wine</h2>
             <div class="wine-grid">
                 <div class="wine-card">
-                    <img src="[WHITE_WINE_IMAGE_URL_1]" alt="White Wine 1">
-                    <h3>[White Wine Name 1]</h3>
-                    <p>[Brief description of White Wine 1]</p>
+                    <img src="https://github.com/jigsaw7474/Yasawa-Island/blob/main/Wine%20Images/2018%20Sam%20Miranda%20Riesling.png?raw=true" alt="2018 Sam Miranda Riesling">
+                    <h3>2018 Sam Miranda Riesling</h3>
+                    <p>King Valley, Australia</p>
                     <div class="prices">
-                        <span>Bottle: [Price per Bottle]</span>
-                        <span>Glass: [Price per Glass]</span>
+                        <span>Bottle: 90</span>
+                        <span>Glass: 21*</span>
                     </div>
                 </div>
                 <div class="wine-card">
-                    <img src="[WHITE_WINE_IMAGE_URL_2]" alt="White Wine 2">
-                    <h3>[White Wine Name 2]</h3>
-                    <p>[Brief description of White Wine 2]</p>
+                    <img src="https://github.com/jigsaw7474/Yasawa-Island/blob/main/Wine%20Images/2019%20Misha%E2%80%99s%20Riesling.png?raw=true" alt="2019 Misha’s Riesling">
+                    <h3>2019 Misha’s Riesling</h3>
+                    <p>Central Otago, New Zealand</p>
                     <div class="prices">
-                        <span>Bottle: [Price per Bottle]</span>
-                        <span>Glass: [Price per Glass]</span>
+                        <span>Bottle: 110</span>
+                        <span>Glass: 23*</span>
                     </div>
                 </div>
                 <div class="wine-card">
-                    <img src="[WHITE_WINE_IMAGE_URL_3]" alt="White Wine 3">
-                    <h3>[White Wine Name 3]</h3>
-                    <p>[Brief description of White Wine 3]</p>
+                    <img src="https://github.com/jigsaw7474/Yasawa-Island/blob/main/Wine%20Images/2019%20Calabria%20Family%20Wines%20Three%20Bridges%20Chardonnay.png?raw=true" alt="2019 Calabria Family Wines Three Bridges Chardonnay">
+                    <h3>2019 Calabria Family Wines Three Bridges Chardonnay</h3>
+                    <p>Riverina, Australia</p>
                     <div class="prices">
-                        <span>Bottle: [Price per Bottle]</span>
-                        <span>Glass: [Price per Glass]</span>
+                        <span>Bottle: 190</span>
+                        <span>Glass: -</span>
                     </div>
                 </div>
                 <div class="wine-card">
-                    <img src="[WHITE_WINE_IMAGE_URL_4]" alt="White Wine 4">
-                    <h3>[White Wine Name 4]</h3>
-                    <p>[Brief description of White Wine 4]</p>
+                    <img src="https://github.com/jigsaw7474/Yasawa-Island/blob/main/Wine%20Images/2021%20Chartron%20et%20Tr%C3%A9buchet%20Macon%20Villages%20Chardonnay.png?raw=true" alt="2021 Chartron et Trébuchet Macon Villages Chardonnay">
+                    <h3>2021 Chartron et Trébuchet Macon Villages Chardonnay</h3>
+                    <p>Burgundy, France</p>
                     <div class="prices">
-                        <span>Bottle: [Price per Bottle]</span>
-                        <span>Glass: [Price per Glass]</span>
+                        <span>Bottle: 285</span>
+                        <span>Glass: -</span>
                     </div>
                 </div>
                 <div class="wine-card">
-                    <img src="[WHITE_WINE_IMAGE_URL_5]" alt="White Wine 5">
-                    <h3>[White Wine Name 5]</h3>
-                    <p>[Brief description of White Wine 5]</p>
+                    <img src="https://github.com/jigsaw7474/Yasawa-Island/blob/main/Wine%20Images/2021%20Domaine%20Michaut%20Chablis%20Chardonnay.png?raw=true" alt="2021 Domaine Michaut Chablis Chardonnay">
+                    <h3>2021 Domaine Michaut Chablis Chardonnay</h3>
+                    <p>Burgundy, France</p>
                     <div class="prices">
-                        <span>Bottle: [Price per Bottle]</span>
-                        <span>Glass: [Price per Glass]</span>
+                        <span>Bottle: 185</span>
+                        <span>Glass: -</span>
                     </div>
                 </div>
                 <div class="wine-card">
-                    <img src="[WHITE_WINE_IMAGE_URL_6]" alt="White Wine 6">
-                    <h3>[White Wine Name 6]</h3>
-                    <p>[Brief description of White Wine 6]</p>
+                    <img src="https://github.com/jigsaw7474/Yasawa-Island/blob/main/Wine%20Images/2020%20Kendall-Jackson%20Grand%20Reserve%20Chardonnay.png?raw=true" alt="2020 Kendall-Jackson Grand Reserve Chardonnay">
+                    <h3>2020 Kendall-Jackson Grand Reserve Chardonnay</h3>
+                    <p>Sonoma, California</p>
                     <div class="prices">
-                        <span>Bottle: [Price per Bottle]</span>
-                        <span>Glass: [Price per Glass]</span>
+                        <span>Bottle: 80</span>
+                        <span>Glass: 20*</span>
                     </div>
                 </div>
                 <div class="wine-card">
-                    <img src="[WHITE_WINE_IMAGE_URL_7]" alt="White Wine 7">
-                    <h3>[White Wine Name 7]</h3>
-                    <p>[Brief description of White Wine 7]</p>
+                    <img src="https://github.com/jigsaw7474/Yasawa-Island/blob/main/Wine%20Images/2021%20Okiwi%20Bay%20Sauvignon%20Blanc.png?raw=true" alt="2021 Okiwi Bay Sauvignon Blanc">
+                    <h3>2021 Okiwi Bay Sauvignon Blanc</h3>
+                    <p>Marlborough, New Zealand</p>
                     <div class="prices">
-                        <span>Bottle: [Price per Bottle]</span>
-                        <span>Glass: [Price per Glass]</span>
+                        <span>Bottle: 160</span>
+                        <span>Glass: -</span>
                     </div>
                 </div>
                 <div class="wine-card">
-                    <img src="[WHITE_WINE_IMAGE_URL_8]" alt="White Wine 8">
-                    <h3>[White Wine Name 8]</h3>
-                    <p>[Brief description of White Wine 8]</p>
+                    <img src="https://github.com/jigsaw7474/Yasawa-Island/blob/main/Wine%20Images/2022%20Shaw%20+%20Smith%20Sauvignon%20Blanc.png?raw=true" alt="2022 Shaw + Smith Sauvignon Blanc">
+                    <h3>2022 Shaw + Smith Sauvignon Blanc</h3>
+                    <p>Adelaide Hills, Australia</p>
                     <div class="prices">
-                        <span>Bottle: [Price per Bottle]</span>
-                        <span>Glass: [Price per Glass]</span>
+                        <span>Bottle: 220</span>
+                        <span>Glass: -</span>
                     </div>
                 </div>
                 <div class="wine-card">
-                    <img src="[WHITE_WINE_IMAGE_URL_9]" alt="White Wine 9">
-                    <h3>[White Wine Name 9]</h3>
-                    <p>[Brief description of White Wine 9]</p>
+                    <img src="https://github.com/jigsaw7474/Yasawa-Island/blob/main/Wine%20Images/2021%20Sauvion%20Les%20Ombelles%20Pouilly%20Fum%C3%A9%20Sauvignon%20Blanc.png?raw=true" alt="2021 Sauvion Les Ombelles Pouilly Fumé Sauvignon Blanc">
+                    <h3>2021 Sauvion Les Ombelles Pouilly Fumé Sauvignon Blanc</h3>
+                    <p>Loire Valley, France</p>
                     <div class="prices">
-                        <span>Bottle: [Price per Bottle]</span>
-                        <span>Glass: [Price per Glass]</span>
+                        <span>Bottle: 120</span>
+                        <span>Glass: 24*</span>
                     </div>
                 </div>
                 <div class="wine-card">
-                    <img src="[WHITE_WINE_IMAGE_URL_10]" alt="White Wine 10">
-                    <h3>[White Wine Name 10]</h3>
-                    <p>[Brief description of White Wine 10]</p>
+                    <img src="https://github.com/jigsaw7474/Yasawa-Island/blob/main/Wine%20Images/2021%20Kellerei%20St%20Pauls%20Pinot%20Grigio.png?raw=true" alt="2021 Kellerei St Pauls Pinot Grigio">
+                    <h3>2021 Kellerei St Pauls Pinot Grigio</h3>
+                    <p>Alto Adige, Italy</p>
                     <div class="prices">
-                        <span>Bottle: [Price per Bottle]</span>
-                        <span>Glass: [Price per Glass]</span>
+                        <span>Bottle: 115</span>
+                        <span>Glass: -</span>
                     </div>
                 </div>
                 <div class="wine-card">
-                    <img src="[WHITE_WINE_IMAGE_URL_11]" alt="White Wine 11">
-                    <h3>[White Wine Name 11]</h3>
-                    <p>[Brief description of White Wine 11]</p>
+                    <img src="https://github.com/jigsaw7474/Yasawa-Island/blob/main/Wine%20Images/2022%20Sella%20&%20Mosca%20_La%20Cala_%20Vermentino%20di%20Sardegna%20DOC.png?raw=true" alt="2022 Sella & Mosca La Cala Vermentino di Sardegna DOC">
+                    <h3>2022 Sella & Mosca "La Cala" Vermentino di Sardegna DOC</h3>
+                    <p>Sardinia, Italy</p>
                     <div class="prices">
-                        <span>Bottle: [Price per Bottle]</span>
-                        <span>Glass: [Price per Glass]</span>
+                        <span>Bottle: 115</span>
+                        <span>Glass: -</span>
                     </div>
                 </div>
             </div>
         </section>
+
+        <div class="footer">
+            <p>ALL ITEMS WITH * INCLUDED IN LIQUOR PACKAGE. ALL OTHER ITEMS AT ADDITIONAL COST</p>
+            <p>ALL PRICES ARE EXCLUSIVE OF GOVERNMENT TAX. CORKAGE FEE $50 PER BOTTLE FOR ITEMS NOT AT THE BAR</p>
+        </div>
     </div>
+
+    <script>
+        function enterWineList() {
+            document.getElementById('greeting-page').style.opacity = '0';
+            setTimeout(function() {
+                document.getElementById('greeting-page').style.display = 'none';
+                document.getElementById('wine-list').style.display = 'block';
+                document.getElementById('wine-list').style.opacity = '1';
+            }, 500);
+        }
+    </script>
 </body>
 </html>
